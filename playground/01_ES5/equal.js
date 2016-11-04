@@ -3,10 +3,10 @@
 
 var user  = {name: "Tom"};
 var user2 = user;
-var user3 = {name:"Tom"};
+var user3 = {name: "Tom"};
 
-console.log(user == user2);  // true
+console.log(user ==  user2); // true
 console.log(user === user2); // true
 
-console.log(user == user3);  // false
+console.log(user ==  user3); // false
 console.log(user === user3); // false

@@ -20,8 +20,7 @@ console.log(user.name);
      this.name = name;
      // return this;
  }
-
-  */
+*/
 
 
 

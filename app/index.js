@@ -2,19 +2,44 @@ require('./app.tag');
 
 // riot.mount('*');
 riot.mount('app')
-riot.route.start(true)
+riot.route.start(true);
 
 
 
-//for (var x in window.document) {
-//   console.log(x);
-//}
+//var myArray = [1,2];
+//var user = new Object();
+//console.log(user.isPrototypeOf(Array));
+//console.log(myArray.isPrototypeOf(Array));
+
+function heavyLogic() {
+    var array = [];
+    var max = 10000000;
+    for (var i = 0 ; i < max; i++) {
+        array.push(i)
+        // if (max%100 == 0) console.log(array.length)
+    }
+    console.log(array.length)
+    console.log(array[max -1])
+}
+
+// setTimeout(heavyLogic, 0);
 
 
-var myArray = [1,2];
+// メソッド定義のパフォーマンス比較
+// require("../playground/01_ES5/class/methodDeclaration/1_.js"); // 0.335
+// require("../playground/01_ES5/class/methodDeclaration/2_.js"); // 0.003
 
-var user = new Object();
+// プロパティアクセス()
+// ほぼ変わらない
+// require("../playground/01_ES5/class/propertyAccess/1_.js"); // 0.251
+// require("../playground/01_ES5/class/propertyAccess/2_.js"); // 0.254
 
-console.log(user.isPrototypeOf(Array));
-console.log(myArray.isPrototypeOf(Array));
-console.log(user.valueOf());
+// ES6 class
+// require("../playground/02_ES6/class/declaration.js"); //
+
+
+// this
+// require("../playground/01_ES5/this/1_.js"); //
+// require("../playground/01_ES5/this/2_.js"); //
+require("../playground/01_ES5/this/3_.js"); //
+
